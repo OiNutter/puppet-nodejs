@@ -1,11 +1,11 @@
-nodejs::prefix: '/opt'
+nodejs::prefix: "%{::boxen::config::home}"
+nodejs::user: "%{::boxen_user}"
 nodejs::provider: 'nodenv'
-nodejs::user: "%{::id}"
 
 nodejs::build::ensure: 'v20140408'
-nodejs::build::prefix: "%{hiera('nodejs::prefix')}/node-build"
-nodejs::build::user: "%{hiera('nodejs::user')}"
+nodejs::build::prefix: "%{'nodejs::prefix'}/node-build"
+nodejs::build::user: "%{'nodejs::user'}"
 
 nodejs::nodenv::ensure: v0.2.0
-nodejs::nodenv::prefix: "%{hiera('nodejs::prefix')}/nodenv"
-nodejs::nodenv::user: "%{hiera('nodejs::user')}"
+nodejs::nodenv::prefix: "%{'nodejs::prefix'}/nodenv"
+nodejs::nodenv::user: "%{'nodejs::user'}"
