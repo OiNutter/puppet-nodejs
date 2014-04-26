@@ -1,5 +1,6 @@
 ---
 :hierarchy:
-  - common
+    - "%{::osfamily}"
+    - common
 
 :merge_behavior: deeper

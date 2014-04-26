@@ -1,0 +1,3 @@
+---
+nodejs::prefix: "%{::boxen::config::home}"
+nodejs::user: "%{::boxen_user}"
